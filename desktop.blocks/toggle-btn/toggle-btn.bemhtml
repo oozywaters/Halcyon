@@ -1,0 +1,12 @@
+block('toggle-btn')(
+  tag()('button'),
+  js()(true),
+  attrs()({ type: 'button' }),
+  content()(function() {
+    var content = [];
+    content.push({
+      tag: 'span'
+      });
+    return content;
+    })
+  )

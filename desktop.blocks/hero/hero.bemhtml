@@ -1,0 +1,50 @@
+block('hero')(
+  tag()('section'),
+  content()(function() {
+    var content = [];
+    content.push({
+      cls: 'container',
+      content: this.ctx.content
+      });
+    return content;
+    }),
+  elem('btn')(
+    tag()('a')
+    ),
+  elem('nav-btn')(
+    bem()(false),
+    cls()('row'),
+    content()(function() {
+      var content = [];
+      content.push({
+        cls: 'col-md-12 text-right',
+        content: this.ctx.content
+        });
+      return content;
+      })
+    ),
+  elem('logo')(
+    // bem()(false),
+    cls()('row'),
+    content()(function() {
+      var content = [];
+      content.push({
+        cls: 'col-md-8 col-md-offset-2 text-center',
+        content: this.ctx.content
+        });
+      return content;
+      })
+    )
+  // elem('nav-btn')(
+  //   bem()('false'),
+  //   content()('OLOOLOLOLO')
+  //   // content()(function() {
+  //   //   var content = [];
+  //   //   content.push({
+  //   //     cls: 'row',
+  //   //     content: this.ctx.content
+  //   //     });
+  //   //   return content;
+  //   //   })
+  //   )
+  )

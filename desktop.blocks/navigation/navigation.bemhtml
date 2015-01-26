@@ -1,0 +1,70 @@
+block('navigation')(
+  tag()('nav'),
+  // js()('true'),
+  content()(function() {
+    var content = [];
+    content.push({
+      cls: 'container-fluid',
+      content: [
+        {
+          cls: 'row',
+          content: [
+            {
+              cls: 'col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2',
+              content: this.ctx.content
+            }
+          ]
+        }
+      ]
+      }
+      // {
+      //   elem: 'toggle'
+      //   }
+        );
+    return content;
+    }),
+  elem('list')(
+    tag()('ul'),
+    content()(function() {
+      var menu_list = [];
+      this.ctx.items.forEach(function(item) {
+        menu_list.push({
+          elem: 'item',
+          content: [
+            {
+              elem: 'link',
+              attrs: { href: item.url},
+              content: item.content
+            }
+          ]
+          });
+        });
+      return menu_list;
+      })
+    ),
+  elem('item')(tag()('li')),
+  elem('link')(
+    tag()('a'),
+    content()(function() {
+      var content = [];
+      content.push(this.ctx.content, {
+        elem: 'arrow'
+        // content: [
+        //   {
+        //     tag: 'i'
+        //   }
+        // ]
+        });
+      return content;
+      })
+    ),
+  elem('arrow')(
+    tag()('span'),
+    content()(function() {
+      return [{
+        tag: 'i',
+        cls: 'fa fa-angle-right'
+        }];
+      })
+    )
+  )

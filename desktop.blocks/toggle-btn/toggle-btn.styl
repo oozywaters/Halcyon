@@ -1,0 +1,30 @@
+.toggle-btn
+  border 0
+  background-color transparent
+  float right
+  outline none
+  cursor pointer
+  padding 10px 35px 15px 0px
+  span, span:before, span:after
+    cursor pointer
+    border-radius 1px
+    height 5px
+    width 35px
+    background #353535
+    position absolute
+    display block
+    content ''
+    transition all 500ms ease-in-out
+  span:before
+    top -10px
+  span:after
+    bottom -10px
+  &_active
+    span
+      background-color transparent
+      &:before
+        top 0
+        transform rotate(45deg)
+      &:after
+        transform translateY(-10px) rotate(-45deg)
+        top 10px

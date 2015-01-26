@@ -1,0 +1,18 @@
+block('intro')(
+  tag()('section'),
+  cls()('text-center'),
+  content()(function() {
+    var content = [];
+    content.push({
+      cls: 'container',
+      content: [{
+        cls: 'row',
+        content: [{
+          cls: 'col-md-8 col-md-offset-2 animated fadeInLeft',
+          content: this.ctx.content
+          }]
+        }]
+      });
+    return content;
+    })
+  )

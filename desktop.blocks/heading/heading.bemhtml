@@ -1,0 +1,5 @@
+block('heading')(
+  mod('arrow', true)(
+    tag()('h1')
+    )
+  )

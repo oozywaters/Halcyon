@@ -1,0 +1,32 @@
+block('logo')(
+  // js()(true),
+  content()(function() {
+    return [
+      {
+        elem: 'title'
+      },
+      {
+        elem: 'desc'
+      }];
+    }),
+  elem('title')(
+    tag()('h1'),
+    cls()('animated fadeInDown'),
+    content()(function() {
+      return ['Halcyon', {
+        tag: 'span',
+        content: 'Days'
+        }];
+      })
+    ),
+  elem('desc')(
+    tag()('p'),
+    cls()('animated fadeInUp delay-05s'),
+    content()(function() {
+      return ['An exclusive HTML5/CSS3 freebie by Peter Finlan, for ', {
+        tag: 'em',
+        content: 'Codrops'
+        }];
+      })
+    )
+  )

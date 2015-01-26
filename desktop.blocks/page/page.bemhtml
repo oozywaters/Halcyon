@@ -1,0 +1,6 @@
+block('page')(
+  elem('footer')(tag()('footer')),
+  elem('footer-sep')(tag()('hr')),
+  elem('footer-rights')(tag()('p')),
+  elem('footer-rights-link')(tag()('a'))
+  )
