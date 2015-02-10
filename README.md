@@ -1,6 +1,6 @@
 # Верстка шаблона [Halcyon Days](http://tympanus.net/codrops/2014/07/14/freebie-halcyon-days-one-page-website-template/)
 
-Проект основан на [`project-stub`](https://github.com/bem/project-stub/tree/enb-merged-config), с использованием фреймворка [`bootstrap`] и различных jQuery-плагинов
+Проект основан на [`project-stub`](https://github.com/bem/project-stub/tree/enb-merged-config), с использованием фреймворка `bootstrap` и различных jQuery-плагинов
 
 Готовый результат можно посмотреть [тут](http://104.236.43.137/halcyon/index.html)
 
