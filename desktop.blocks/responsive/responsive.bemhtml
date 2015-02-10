@@ -1,0 +1,4 @@
+block('responsive')(
+  js()(true),
+  tag()('section')
+  )

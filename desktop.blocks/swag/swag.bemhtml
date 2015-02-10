@@ -1,0 +1,13 @@
+block('swag')(
+  js()(true),
+  tag()('section'),
+  elem('slogan')(
+    tag()('h1')
+    ),
+  elem('arrow-btn')(
+    tag()('a')
+    ),
+  elem('arrow-icon')(
+    tag()('i')
+    )
+  )

@@ -1,0 +1,12 @@
+block('mylist').mod('contact', true)(
+  elem('item')(
+    content()(function() {
+      var content = [];
+      content.push({
+        elem: 'lightbox',
+        content: this.ctx.content
+        });
+      return content;
+      })
+    )
+  )

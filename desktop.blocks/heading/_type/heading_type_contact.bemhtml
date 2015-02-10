@@ -1,0 +1,14 @@
+block('heading').mod('type', 'contact')(
+  tag()('h2'),
+  content()(function() {
+    var content = [];
+    content.push({
+        elem: 'icon',
+        elemMods: { 'type': this.ctx.icon }
+      },{
+        tag: 'span',
+        content: this.ctx.content
+        });
+    return content;
+    })
+  )

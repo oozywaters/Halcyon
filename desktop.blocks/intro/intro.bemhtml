@@ -1,18 +1,25 @@
 block('intro')(
   tag()('section'),
-  cls()('text-center'),
-  content()(function() {
-    var content = [];
-    content.push({
-      cls: 'container',
-      content: [{
-        cls: 'row',
-        content: [{
-          cls: 'col-md-8 col-md-offset-2 animated fadeInLeft',
-          content: this.ctx.content
-          }]
-        }]
-      });
-    return content;
-    })
+  js()(true),
+  elem('text')(tag()('p')),
+  elem('link')(
+    tag()('a'),
+    attrs()(function() { return { href: this.ctx.url }; })
+    )
+  // content()(function() {
+  //   var content = [];
+  //   content.push({
+  //     block: 'container',
+  //     content: [{
+  //       block: 'row',
+  //       content: [{
+  //         elem: 'in',//'page__wp1 col-md-8 col-md-offset-2',
+  //         // elemMods: { 'animated': true },
+  //         // js: true,
+  //         content: this.ctx.content
+  //         }]
+  //       }]
+  //     });
+  //   return content;
+  //   })
   )

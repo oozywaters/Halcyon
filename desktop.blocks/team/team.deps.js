@@ -1,0 +1,6 @@
+({
+  mustDeps: [{
+    block: 'base'
+  }],
+  shouldDeps: []
+})

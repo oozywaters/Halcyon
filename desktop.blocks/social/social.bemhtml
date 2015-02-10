@@ -1,0 +1,19 @@
+block('social')(
+  tag()('ul'),
+  elem('item')(
+    tag()('li'),
+    content()(function() {
+      var content = [];
+      content.push({
+        elem: 'btn',
+        content: {
+          elem: 'icon',
+          mods: { 'type': this.ctx.type }
+        }
+        });
+      return content;
+      })
+    ),
+  elem('btn')(tag()('a')),
+  elem('icon')(tag()('i'))
+  )

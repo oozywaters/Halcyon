@@ -1,6 +1,6 @@
 {
   "author": "oozywaters",
-  "name": "Brandname",
+  "name": "Halcyon",
   "version": "1.0.0",
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "grunt-csso": "latest",
     "grunt-cssrb": "latest",
     "grunt-enb": "latest",
+    "grunt-prettify": "latest",
     "grunt-replace": "latest",
     "grunt-shell": "latest",
     "nib": "latest",

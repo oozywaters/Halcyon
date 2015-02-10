@@ -49,6 +49,19 @@ module.exports = function(grunt) {
             noLog: false
         }
     },
+    prettify: {
+      options: {
+        'indent': 2,
+        'indent_char': ' '
+      },
+      html: {
+        expand: true,
+        cwd: 'build/',
+        ext: '.html',
+        src: ['*.html'],
+        dest: 'build/'
+      }
+    },
     clean: {
       // options: {
       //   'no-write': true
@@ -68,7 +81,7 @@ module.exports = function(grunt) {
         'mkdir -p build/css/ build/js/',
         'cp favicon.ico build/',
         'cp desktop.bundles/merged/_merged.js build/js/main.js',
-        'cp -R desktop.bundles/merged/img/ build/img/',
+        'cp -R img/ build/img/',
         // createSymLinks.join('&&'),
         ].join('&&')
       }
@@ -129,6 +142,10 @@ module.exports = function(grunt) {
               match: /"([\w\._-]+).js"/,
               replacement: '"js/main.js"'
             },
+            {
+              match: '../../img',
+              replacement: 'img'
+            }
           ],
           usePrefix: false
         },
@@ -149,7 +166,8 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks('grunt-csso');
   grunt.loadNpmTasks('grunt-cssrb');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-prettify');
   grunt.loadNpmTasks('grunt-replace');
 
-  grunt.registerTask('default', ['enb', 'shell', 'replace:html', 'cssrb', 'imagemin']);
+  grunt.registerTask('default', ['enb', 'shell', 'replace:html', 'cssrb', 'imagemin', 'prettify:html']);
 };

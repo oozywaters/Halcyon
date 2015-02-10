@@ -24,8 +24,7 @@ module.exports = require('enb-stylus/techs/css-stylus').buildFlow()
     .methods({
         _configureRenderer: function (renderer) {
             var nib,
-                bootstrap,
-                fa;
+                bootstrap;
             try {
                 nib = require('nib');
                 bootstrap = require('bootstrap-styl');

@@ -1,0 +1,54 @@
+.nav
+  // box-sizing border-box
+  background-color #242830
+  margin-top -1px
+  // &__in
+  //   // margin 1em 0
+  //   make-md-column(8)
+  //   make-md-column-offset(2)
+  //   make-sm-column(8)
+  //   make-sm-column-offset(2)
+  //   make-sd-column(8)
+  //   make-xs-column-offset(2)
+  &__list
+    box-sizing border-box
+    margin 1em 0
+    padding 0
+    make-md-column(8)
+    make-md-column-offset(2)
+    make-sm-column(8)
+    make-sm-column-offset(2)
+    make-sd-column(8)
+    make-xs-column-offset(2)
+  &__item
+    color rgba(255, 255, 255, 0.6)
+    display block
+    border-bottom 1px dotted rgba(255, 255, 255, 0.2)
+    transition all 0.5s ease
+    padding-left 0
+    position relative
+    &:last-child
+      border none
+    &:focus
+      text-decoration none
+      color rgba(255, 255, 255, 1)
+  &__link
+    // font-smoothing antialiased
+    // font-family Varela Round, sans-serif
+    font-size 14px
+    text-decoration none
+    text-shadow 1px 1px 1px rgba(0, 0, 0, 0.004)
+    color rgba(255, 255, 255, 0.6)
+    display block
+    padding 20px
+    transition all 0.5s ease
+    padding-left 0
+    position relative
+    &:hover
+      // text-decoration none
+      color rgba(255, 255, 255, 1)
+  &__arrow
+    position absolute
+    right 0
+  &_hide
+    display none

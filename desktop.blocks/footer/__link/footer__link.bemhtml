@@ -1,0 +1,4 @@
+block('footer').elem('link')(
+  tag()('a'),
+  attrs()({ href: '#' })
+  )

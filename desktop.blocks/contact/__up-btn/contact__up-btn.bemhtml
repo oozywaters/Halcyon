@@ -1,0 +1,11 @@
+block('contact').elem('up-btn')(
+  tag()('a'),
+  // attrs()({ type: 'button '}),
+  content()(function() {
+    var content = [];
+    content.push({
+      elem: 'up-icon'
+      })
+    return content;
+    })
+  )

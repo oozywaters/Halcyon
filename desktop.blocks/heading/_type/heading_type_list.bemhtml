@@ -1,0 +1,1 @@
+block('heading').mod('type', 'list')(tag()('h2'))

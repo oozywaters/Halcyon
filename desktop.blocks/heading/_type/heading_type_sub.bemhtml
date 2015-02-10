@@ -1,0 +1,16 @@
+block('heading').mod('type', 'sub')(
+  tag()('h1'),
+  content()(function() {
+    var content = [];
+    content.push(
+      {
+        elem: 'icon'
+      },
+      {
+        tag: 'span',
+        content: this.ctx.content
+      }
+      );
+    return content;
+    })
+  )

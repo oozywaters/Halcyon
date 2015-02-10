@@ -6,7 +6,7 @@ BEMDOM.decl(this.name, {
   onSetMod: {
     'js': {
       'inited':function() {
-        this.bindTo('click', this._onClick);
+        // Init
       }
     }
   },
@@ -14,6 +14,12 @@ BEMDOM.decl(this.name, {
     this.emit('click');
     // console.log('toggle clicked');
     this.toggleMod('active');
+  }
+}, {
+  live: function() {
+    this.liveBindTo('click', function() {
+      this._onClick();
+    });
   }
 });
 

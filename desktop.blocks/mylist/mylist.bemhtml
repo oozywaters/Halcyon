@@ -1,0 +1,19 @@
+block('mylist')(
+  tag()('ul'),
+  js()(true),
+  elem('icon')(
+    content()(function() {
+      var m = [];
+      m[this.ctx.type] = true;
+      // var m(type) = function()
+      return [{
+        elem: 'icon-pic',
+        elemMods: m
+        }];
+      })
+    ),
+  elem('icon-pic')(tag()('i')),
+  elem('image')(tag()('img')),
+  elem('item')(tag()('li')),
+  elem('item-text')(tag()('p'))
+  )

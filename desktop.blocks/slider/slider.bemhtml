@@ -1,0 +1,14 @@
+block('slider')(
+  js()(true),
+  content()(function() {
+    var content = [];
+    content.push({
+        tag: 'ul',
+        cls: 'slides',
+        content: this.ctx.content
+      });
+    return content;
+    }),
+  elem('item')(tag()('li')),
+  elem('text')(tag()('p'))
+  )

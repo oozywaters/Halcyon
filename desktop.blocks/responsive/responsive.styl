@@ -1,0 +1,53 @@
+.responsive
+  // make-md-column(12)
+  box-sizing border-box
+  position relative
+  min-height 650px
+  text-align center
+  // height 1000px
+  @media screen and (min-width:480px) and (max-width:991px)
+    background: #f3f5f8
+    height: 540px
+  @media screen and (max-width: 480px)
+    background: #f3f5f8
+    height: 640px
+  &__in
+    box-sizing border-box
+    height 650px
+    // @media screen and (min-width:480px) and (max-width:991px)
+    //   background: #f3f5f8
+    //   height: 540px
+    // @media screen and (max-width: 480px)
+    //   background: #f3f5f8
+    //   height: 640px
+  &__col1
+    position absolute
+    top 0
+    left 0
+    width: 50%
+    background: #f3f5f8
+    float: left
+    height: 100%
+    box-shadow: inset -15px -11px 40px -6px rgba(0, 0, 0, 0.1)
+    // z-index: 1
+    @media screen and (max-width:991px)
+      display: none
+    @media screen and (max-width:480px)
+      display: none
+  &__pic
+    visibility hidden
+    background url(iphone-bg.png) no-repeat
+    background-position 50px center
+    height 100%
+    &_animated
+      visibility visible
+      animation-name fadeInDown
+      animation-duration 1s
+      animation-fill-mode both
+  &__col2
+    padding-top 50px
+  &__slider
+    box-sizing border-box
+    make-md-column(5)
+    make-md-column-offset(7)
+    // margin-left -100%

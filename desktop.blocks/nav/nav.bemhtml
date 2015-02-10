@@ -1,0 +1,59 @@
+block('nav')(
+  tag()('nav'),
+  content()(function() {
+    var content = [];
+    var menuItems = this.ctx.items;
+    content.push({
+      block: 'container',
+      content: [
+        {
+          block: 'row',
+          content: {
+            block: 'nav',
+            elem: 'list',
+            content: (function() {
+              var menuList = [];
+              menuItems.forEach(function(item) {
+                menuList.push({
+                  elem: 'item',
+                  content: {
+                    elem: 'link',
+                    attrs: { href: item.url },
+                    content: item.content
+                  }
+                  })
+                });
+              menuList.push();
+              return menuList;
+              })()
+          }
+        }
+      ]
+      }
+        );
+    return content;
+    }),
+  elem('list')(
+    tag()('ul')
+    ),
+  elem('item')(tag()('li')),
+  elem('link')(
+    tag()('a'),
+    content()(function() {
+      var content = [];
+      content.push(this.ctx.content, {
+        elem: 'arrow'
+        });
+      return content;
+      })
+    ),
+  elem('arrow')(
+    tag()('span'),
+    content()(function() {
+      return [{
+        tag: 'i',
+        cls: 'fa fa-angle-right'
+        }];
+      })
+    )
+  )

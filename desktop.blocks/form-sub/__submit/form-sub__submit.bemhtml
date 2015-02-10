@@ -1,0 +1,6 @@
+block('form-sub').elem('submit')(
+  tag()('input'),
+  attrs()(function() {
+    return { type: 'submit', value: this.ctx.content };
+    })
+  )

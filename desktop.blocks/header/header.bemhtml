@@ -1,46 +1,36 @@
 block('header')(
   js()(true),
   tag()('header'),
-  // content()(function() {
-  //   return [{
-  //     block: 'toggle-btn'
-  //     }];
-  //   })
   content()(function() {
     var content = [];
     content.push([
     {
-      block: 'navigation',
+      block: 'nav',
       mods: { hide: true },
-      content: [
+      items: [
         {
-          elem: 'list',
-          items: [
-            {
-              url: '#intro',
-              content: 'Introduction'
-            },
-            {
-              url: '#',
-              content: 'Features'
-            },
-            {
-              url: '#',
-              content: 'Responsive Design'
-            },
-            {
-              url: '#',
-              content: 'Portfolio'
-            },
-            {
-              url: '#',
-              content: 'Team'
-            },
-            {
-              url: '#',
-              content: 'Get In Touch'
-            }
-          ]
+          url: '#intro',
+          content: 'Introduction'
+        },
+        {
+          url: '#',
+          content: 'Features'
+        },
+        {
+          url: '#',
+          content: 'Responsive Design'
+        },
+        {
+          url: '#',
+          content: 'Portfolio'
+        },
+        {
+          url: '#',
+          content: 'Team'
+        },
+        {
+          url: '#',
+          content: 'Get In Touch'
         }
       ]
     },
@@ -48,31 +38,32 @@ block('header')(
       block: 'hero',
       content: [
         {
-          elem: 'nav-btn',
+          block: 'container',
+          mods: { 'fixed': true },
           content: [
             {
-              block: 'toggle-btn'
-            }
-          ]
-        },
-        {
-          elem: 'logo',
-          content: [
+              block: 'row',
+              content: {
+                block: 'hero',
+                elem: 'nav-btn',
+                content: {
+                  block: 'toggle-btn'
+                }
+              }
+            },
             {
-              block: 'logo'
-            }
-          ]
-          // block: 'logo',
-          // mix: { block: 'hero', elem: 'logo' }
-        },
-        {
-          elem: 'learn-more',
-          content: [
+              block: 'row',
+              content: {
+                block: 'logo',
+                mix: { block: 'hero', elem: 'logo' }
+              }
+            },
             {
-              block: 'btn',
-              tag: 'a',
-              attrs: { href: 'http://tympanus.net/codrops/?p=19439' },
-              content: 'Back To The Article'
+              block: 'row',
+              content: {
+                block: 'hero',
+                elem: 'learn-more'
+              }
             }
           ]
         }

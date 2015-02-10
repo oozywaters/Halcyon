@@ -1,0 +1,18 @@
+block('form-sub')(
+  tag()('form'),
+  attrs()({ action: '#' }),
+  content()(function() {
+    var content = [];
+    content.push(
+      {
+        elem: 'input'
+      },
+      ' ',
+      {
+        elem: 'submit',
+        content: 'Send'
+      }
+      );
+    return content;
+    })
+  )

@@ -6,16 +6,19 @@ BEMDOM.decl(this.name, {
   onSetMod: {
     'js': {
       'inited': function() {
-        var toggle = this.findBlockInside('toggle-btn');
-        var nav = this.findBlockInside('navigation');
-        toggle.on('click', function() {
-          nav.domElem.slideToggle();
-        });
+        // Init
       }
     }
   },
-  onClick: function() {
-    console.log('click' + this.domElem);
+  _toggleNav: function() {
+    var nav = this.findBlockInside('nav');
+    nav.toggle();
+  }
+}, {
+  live: function() {
+    this.liveInitOnBlockInsideEvent('click', 'toggle-btn', function() {
+      this._toggleNav();
+    });
   }
 });
 

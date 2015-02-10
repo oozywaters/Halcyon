@@ -1,0 +1,36 @@
+block('overlay')(
+  js()(true),
+  content()(function() {
+    var content = [];
+    content.push({
+        elem: 'img',
+        tag: 'img',
+        attrs: { src: this.ctx.image, alt: 'Portfolio Item' },
+        // tag: 'img',
+        // attrs: ({ src: this.ctx.image })
+      },
+      {
+        elem: 'fx',
+        content: [
+          {
+            elem: 'link',
+            attrs: { href: '#' },
+            content: [
+              {
+                elem: 'icon'
+              },
+              'View More'
+            ]
+          },
+          {
+            elem: 'fx-close',
+            content: 'x'
+          }
+        ]
+      }
+      );
+    return content;
+    }),
+  elem('link')(tag()('a')),
+  elem('icon')(tag()('i'))
+  )

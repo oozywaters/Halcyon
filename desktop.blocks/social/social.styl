@@ -1,0 +1,35 @@
+.social
+  list-style 0
+  margin 0
+  padding 0
+  &__item
+    display inline-block
+    margin-right 10px
+    &:last-child
+      margin-right 0
+  &__btn
+    width 40px
+    height 40px
+    border-radius 50%
+    background #242830
+    display inline-block
+    color #fff
+    font-size 17px
+    line-height 40px
+    text-align center
+    transition all 0.5s
+    text-decoration none
+    cursor pointer
+    &:hover, &:focus
+      background #3dc9b3
+      color #fff
+  &__icon
+    &_type_dribble
+      fa(dribbble)
+    &_type_twitter
+      fa(twitter)
+    &_type_email
+      fa(envelope)
+  // &__icon_type_dribble
+  //   .social__icon
+  //     fa(dribbble)

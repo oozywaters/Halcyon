@@ -1,15 +1,25 @@
 .hero
+  // box-sizing border-box
   background url(hero-bg.jpg) no-repeat center center
   background-size cover
   padding: 65px 0 300px 0
   height auto
-  // @extend .container
+  &__nav-btn
+    box-sizing inherit
+    // height 26px
+    make-md-column(12)
+    float right
+    // text-align right
   &__logo
+    box-sizing inherit
+    make-md-column(8)
+    make-md-column-offset(2)
+    text-align center
     padding-top 170px
   &__learn-more
-    make-row()
+    box-sizing inherit
+    font-size 14px
     make-md-column(6)
     make-md-column-offset(3)
-    // button-variant(rgba(61, 201, 179, 1))
     text-align center
     margin-top 60px

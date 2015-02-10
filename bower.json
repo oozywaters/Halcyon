@@ -9,11 +9,15 @@
     "libs"
   ],
   "dependencies": {
-    "animate.css": "latest",
+    "animate-stylus": "https://github.com/slang800/animate-stylus/archive/master.zip",
     "bem-core": "v2.3.0",
     "bem-components": "5f3cefd5fa1c7e5205d51fa10b8e3b59c31529d2",
+    "bem-grid": "latest",
+    "flexslider": "latest",
     "jquery": "latest",
-    "jquery-color": "latest"
+    "jquery-color": "latest",
+    "modernizr": "latest",
+    "waypoints": "latest"
   },
   "resolutions": {
     "bem-core": "v2.3.0"
