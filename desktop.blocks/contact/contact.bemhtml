@@ -3,11 +3,23 @@ block('contact')(
   tag()('section'),
   content()(function() {
     var content = [];
-    content.push({
-      elem: 'up-btn'
+    content.push(
+      {
+        elem: 'up-btn'
       },
-      this.ctx.content
-      );
+      {
+        block: 'container',
+        mods: { 'fixed': true},
+        content: [
+          {
+            block: 'row',
+            elem: 'heading',
+            content: {
+              block: 'heading',
+              mods: { 'type': 'arrow' },
+              content: this.ctx.title
+            }
+          }, this.ctx.content ]});
     return content;
     })
   )

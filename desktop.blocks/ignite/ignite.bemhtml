@@ -1,3 +1,24 @@
 block('ignite')(
-  tag()('section')
+  tag()('section'),
+  content()(function() {
+    var content = [];
+    content.push({
+      block: 'container',
+      mods: { 'fixed': true },
+      content: {
+        block: 'row',
+        content: {
+          block: 'ignite',
+          elem: 'in',
+          content: {
+            elem: 'btn',
+            tag: 'a',
+            attrs: { href: '#' },
+            content: 'Ignite Your Passion'
+          }
+        }
+      }
+      });
+    return content;
+    })
   )

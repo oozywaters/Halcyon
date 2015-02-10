@@ -1,0 +1,7 @@
+block('hero').elem('nav-btn')(
+  content()(function() {
+    return [{
+      block: 'toggle-btn'
+      }];
+    })
+  )

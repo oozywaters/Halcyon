@@ -9,10 +9,8 @@
         block: 'row'
       },
       {
-        block: 'hero'
-      },
-      {
-        block: 'toggle-btn'
+        block: 'hero',
+        elems: ['logo', 'learn-more', 'nav-btn']
       },
       {
         block: 'nav'

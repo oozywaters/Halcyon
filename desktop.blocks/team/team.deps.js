@@ -2,5 +2,8 @@
   mustDeps: [{
     block: 'base'
   }],
-  shouldDeps: []
+  shouldDeps: [
+    { block: 'row' },
+    { elem: 'heading' }
+  ]
 })

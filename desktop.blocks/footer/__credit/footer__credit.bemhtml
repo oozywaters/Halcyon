@@ -1,0 +1,18 @@
+block('footer').elem('credit')(
+  content()(function() {
+    return [{
+      elem: 'text',
+      content: [ 'Designed & Developed by ',
+        {
+          elem: 'link',
+          attrs: { href: 'http://www.peterfinlan.com' },
+          content: 'Peter Finlan' 
+        }, ' exclusively for ', 
+        {
+          elem: 'link',
+          attrs: { href: 'http://tympanus.net/codrops' },
+          content: '<em>Codrops</em>'
+          }]
+      }];
+    })
+  )

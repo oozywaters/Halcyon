@@ -1,11 +1,6 @@
 ({
-  mustDeps: [{
-    block: 'base'
-  }],
+  mustDeps: [],
   shouldDeps: [
-  {
-    block: 'toggle-btn'
-  },
   {
     block: 'logo',
     elems: [

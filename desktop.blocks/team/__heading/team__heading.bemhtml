@@ -1,0 +1,9 @@
+block('team').elem('heading')(
+  content()(function() {
+    return {
+      block: 'heading',
+      mods: { 'type': 'arrow' },
+      content: this.ctx.content
+    }
+    })
+  )

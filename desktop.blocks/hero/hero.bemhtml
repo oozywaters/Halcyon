@@ -1,30 +1,6 @@
 block('hero')(
   tag()('section'),
-  // content()(function() {
-  //   var content = [];
-  //   var ctxContent = this.ctx.content;
-  //   content.push({
-  //     cls: 'container',
-  //     mods: { 'fixed': true },
-  //     content: this.ctx.content
-  //     });
-  //   return content;
-  //   }),
   elem('btn')(
     tag()('a')
-    ),
-  elem('learn-more')(
-    // bem()(false),
-    // cls()('row'),
-    content()(function() {
-      var content = [];
-      content.push({
-        block: 'bttn',
-        tag: 'a',
-        attrs: { href: 'http://tympanus.net/codrops/?p=19439' },
-        content: 'Back To The Article'
-        });
-      return content;
-      })
     )
   )

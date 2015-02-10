@@ -1,0 +1,12 @@
+block('hero').elem('learn-more')(
+  content()(function() {
+    var content = [];
+    content.push({
+      block: 'bttn',
+      tag: 'a',
+      attrs: { href: 'http://tympanus.net/codrops/?p=19439' },
+      content: 'Back To The Article'
+      });
+    return content;
+    })
+  )

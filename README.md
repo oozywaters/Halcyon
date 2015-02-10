@@ -14,7 +14,7 @@
  $ ./node_modules/.bin/enb server
 
 ```
-Страница `index` доступна по адресу http://localhost:8080/desktop.bundles/index/index.html
+Страница `index` доступна по адресу [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html)
 
 ## Сборка статичной верстки
 

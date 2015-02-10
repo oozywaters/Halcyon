@@ -1,3 +1,19 @@
 block('team')(
-  tag()('section')
+  tag()('section'),
+  content()(function() {
+    return [{
+      block: 'container',
+      mods: { fixed: true },
+      content: [
+        {
+          block: 'row',
+          content: {
+            block: 'team',
+            elem: 'heading',
+            content: this.ctx.title
+          }
+        }, this.ctx.content
+      ]
+    }];
+    })
   )

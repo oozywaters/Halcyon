@@ -1,3 +1,20 @@
 block('subscribe')(
-  tag()('section')
+  tag()('section'),
+  content()(function() {
+    var content = [];
+    content.push({
+      block: 'content',
+      mods: { 'fixed': true },
+      content: [{
+          block: 'heading',
+          mods: { 'type': 'sub' },
+          mix: { block: 'subscribe', elem: 'heading' },
+          content: 'Subscribe to stay in the loop'
+        },
+        {
+          block: 'form-sub'
+        }]
+      });
+    return content; 
+    })
   )

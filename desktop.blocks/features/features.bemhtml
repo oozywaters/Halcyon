@@ -1,18 +1,25 @@
 block('features')(
-  tag()('section')
-  // cls()('text-center'),
-  // content()(function() {
-  //   var content = [];
-  //   content.push({
-  //     block: 'container',
-  //     content: [{
-  //       cls: 'row',
-  //       content: [{
-  //         cls: 'col-md-12',
-  //         content: this.ctx.content
-  //         }]
-  //       }]
-  //     });
-  //   return content;
-  //   })
+  tag()('section'),
+  content()(function() {
+    var content = [];
+    content.push({
+      block: 'container',
+      mods: { 'fixed': true },
+      content: {
+        block: 'row',
+        content: {
+          block: 'features',
+          elem: 'in',
+          content: [
+            {
+              block: 'heading',
+              mods: { 'type': 'arrow' },
+              content: this.ctx.title
+            },
+            this.ctx.content ]
+        }
+      }
+      });
+    return content;
+    })
   )

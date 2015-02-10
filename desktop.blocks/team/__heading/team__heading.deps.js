@@ -3,7 +3,6 @@
     block: 'base'
   }],
   shouldDeps: [
-    { block: 'container' },
-    { block: 'row' },
+    { block: 'heading', mods: { 'type': 'arrow'} }
   ]
 })

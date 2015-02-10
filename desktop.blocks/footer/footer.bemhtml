@@ -1,1 +1,21 @@
-block('footer')(tag()('footer'))
+block('footer')(
+  tag()('footer'),
+  content()(function() {
+    return [{
+      block: 'container',
+      mods: { 'fixed': true },
+      content: {
+        block: 'row',
+        content: [
+        {
+          block: 'footer',
+          elem: 'legals'
+        },
+        {
+          block: 'footer',
+          elem: 'credit'
+        }]
+      }
+      }];
+    })
+  )

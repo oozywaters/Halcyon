@@ -1,6 +1,7 @@
 ({
     mustDeps: [],
-    shouldDeps: [{
-      elem: 'in'
-    }]
+    shouldDeps: [
+      { elem: 'in' },
+      { block: 'heading', mods: { 'type': 'arrow' } }
+    ]
 })

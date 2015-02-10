@@ -1,5 +1,19 @@
 block('social')(
   tag()('ul'),
+  content()(function() {
+    return [{
+      elem: 'item',
+      type: 'dribble'
+    },
+    {
+      elem: 'item',
+      type: 'twitter'
+    },
+    {
+      elem: 'item',
+      type: 'email'
+      }];
+    }),
   elem('item')(
     tag()('li'),
     content()(function() {

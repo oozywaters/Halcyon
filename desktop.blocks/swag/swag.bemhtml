@@ -1,11 +1,33 @@
 block('swag')(
   js()(true),
   tag()('section'),
+  content()(function() {
+    var content = [];
+    content.push({
+      block: 'container',
+      mods: { 'fixed': true },
+      content: {
+        block: 'row',
+        content: {
+          block: 'swag',
+          elem: 'in',
+          content: [
+            this.ctx.content,
+            {
+              elem: 'arrow-btn'
+            }]
+        }
+      }
+      });
+    return content;
+    }),
   elem('slogan')(
     tag()('h1')
     ),
   elem('arrow-btn')(
-    tag()('a')
+    tag()('a'),
+    attrs()({ href: '#' }),
+    content()(function() { return { elem: 'arrow-icon' }; })
     ),
   elem('arrow-icon')(
     tag()('i')

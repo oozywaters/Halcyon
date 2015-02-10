@@ -1,0 +1,12 @@
+block('contact').elem('social').def()(function() {
+  applyCtx({
+    block: 'row',
+    content: {
+      block: 'contact',
+      elem: 'social',
+      content: {
+        block: 'social'
+      }
+    }
+    })
+  })
