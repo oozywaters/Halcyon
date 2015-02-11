@@ -93,64 +93,56 @@
         }
       },
       {
-        block: 'container',
-        mods: { 'fixed': true },
-        mix: { block: 'responsive', elem: 'col2' },
+        elem: 'col2',
         content: {
-          block: 'row',
-          content: {
-            block: 'responsive',
-            elem: 'slider',
-            content: {
-              block: 'slider',
+          block: 'slider',
+          mix: { block: 'responsive', elem: 'slider' },
+          content: [
+            {
+              elem: 'item',
               content: [
                 {
-                  elem: 'item',
-                  content: [
-                    {
-                      block: 'heading',
-                      mods: { 'type': 'arrow' },
-                      content: 'Responsive Design Specialists'
-                    },
-                    {
-                      elem: 'text',
-                      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero. '
-                    },
-                    {
-                      elem: 'text',
-                      content: 'Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan. '
-                    },
-                    {
-                      elem: 'text',
-                      content: 'Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros.'
-                    }
-                  ]
+                  block: 'heading',
+                  mods: { 'type': 'arrow' },
+                  content: 'Responsive Design Specialists'
                 },
                 {
-                  elem: 'item',
-                  content: [
-                    {
-                      block: 'heading',
-                      mods: { 'type': 'arrow' },
-                      content: 'Bootstrap Professionals'
-                    },
-                    {
-                      elem: 'text',
-                      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero. '
-                    },
-                    {
-                      elem: 'text',
-                      content: 'Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan. '
-                    },
-                    {
-                      elem: 'text',
-                      content: 'Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros.'
-                    }
-                  ]
+                  elem: 'text',
+                  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero. '
+                },
+                {
+                  elem: 'text',
+                  content: 'Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan. '
+                },
+                {
+                  elem: 'text',
+                  content: 'Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros.'
+                }
+              ]
+            },
+            {
+              elem: 'item',
+              content: [
+                {
+                  block: 'heading',
+                  mods: { 'type': 'arrow' },
+                  content: 'Bootstrap Professionals'
+                },
+                {
+                  elem: 'text',
+                  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero. '
+                },
+                {
+                  elem: 'text',
+                  content: 'Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan. '
+                },
+                {
+                  elem: 'text',
+                  content: 'Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros.'
                 }
               ]
             }
-          }
+          ]
         }
       }]
     },
@@ -169,114 +161,107 @@
     {
       block: 'portfolio',
       content: {
-        block: 'container',
-        mods: { 'fixed': true },
-        content: {
-          block: 'row',
-          content: {
-            block: 'slider',
-            js: { touch: 'false' },
-            content: [{
-                elem: 'item',
-                content: {
-                  block: 'mylist',
+        block: 'slider',
+        js: { touch: 'false' },
+        content: [{
+            elem: 'item',
+            content: {
+              block: 'mylist',
+              content: [
+                {
+                  img: '../../img/portfolio-01.jpg',
+                  js: { animation: 'fadeInDown' },
+                  title: 'Creative Minds',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                },
+                {
+                  img: '../../img/portfolio-02.jpg',
+                  js: { animation: 'fadeInDown', delay: '0.5s' },
+                  title: 'Creative Hearts',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                },
+                {
+                  img: '../../img/portfolio-03.jpg',
+                  js: { animation: 'fadeInDown', delay: '1s' },
+                  title: 'Creative Ideas',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                }
+              ].map(function(item) {
+                return [{
+                  elem: 'item',
+                  js: item.js,
                   content: [
                     {
-                      img: '../../img/portfolio-01.jpg',
-                      js: { animation: 'fadeInDown' },
-                      title: 'Creative Minds',
-                      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                      elem: 'overlay',
+                      content: {
+                        block: 'overlay',
+                        image: item.img
+                      }
                     },
                     {
-                      img: '../../img/portfolio-02.jpg',
-                      js: { animation: 'fadeInDown', delay: '0.5s' },
-                      title: 'Creative Hearts',
-                      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                      block: 'heading',
+                      mods: { 'type': 'list' },
+                      content: item.title
                     },
                     {
-                      img: '../../img/portfolio-03.jpg',
-                      js: { animation: 'fadeInDown', delay: '1s' },
-                      title: 'Creative Ideas',
-                      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                      elem: 'item-text',
+                      content: item.text
                     }
-                  ].map(function(item) {
-                    return [{
-                      elem: 'item',
-                      js: item.js,
-                      content: [
-                        {
-                          elem: 'overlay',
-                          content: {
-                            block: 'overlay',
-                            image: item.img
-                          }
-                        },
-                        {
-                          block: 'heading',
-                          mods: { 'type': 'list' },
-                          content: item.title
-                        },
-                        {
-                          elem: 'item-text',
-                          content: item.text
-                        }
-                      ]
-                    }];
-                  })
+                  ]
+                }];
+              })
+            }
+          },
+          {
+            elem: 'item',
+            content: {
+              block: 'mylist',
+              content: [
+                {
+                  img: '../../img/portfolio-01.jpg',
+                  js: { animation: 'fadeInDown' },
+                  title: 'Creative Minds',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                },
+                {
+                  img: '../../img/portfolio-02.jpg',
+                  js: { animation: 'fadeInDown', delay: '0.5s' },
+                  title: 'Creative Hearts',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                },
+                {
+                  img: '../../img/portfolio-03.jpg',
+                  js: { animation: 'fadeInDown', delay: '1s' },
+                  title: 'Creative Ideas',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
                 }
-              },
-              {
-                elem: 'item',
-                content: {
-                  block: 'mylist',
+              ].map(function(item) {
+                return [{
+                  elem: 'item',
+                  js: item.js,
                   content: [
                     {
-                      img: '../../img/portfolio-01.jpg',
-                      js: { animation: 'fadeInDown' },
-                      title: 'Creative Minds',
-                      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                      elem: 'overlay',
+                      content: {
+                        block: 'overlay',
+                        image: item.img
+                      }
                     },
                     {
-                      img: '../../img/portfolio-02.jpg',
-                      js: { animation: 'fadeInDown', delay: '0.5s' },
-                      title: 'Creative Hearts',
-                      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                      block: 'heading',
+                      mods: { 'type': 'list' },
+                      content: item.title
                     },
                     {
-                      img: '../../img/portfolio-03.jpg',
-                      js: { animation: 'fadeInDown', delay: '1s' },
-                      title: 'Creative Ideas',
-                      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                      elem: 'item-text',
+                      content: item.text
                     }
-                  ].map(function(item) {
-                    return [{
-                      elem: 'item',
-                      js: item.js,
-                      content: [
-                        {
-                          elem: 'overlay',
-                          content: {
-                            block: 'overlay',
-                            image: item.img
-                          }
-                        },
-                        {
-                          block: 'heading',
-                          mods: { 'type': 'list' },
-                          content: item.title
-                        },
-                        {
-                          elem: 'item-text',
-                          content: item.text
-                        }
-                      ]
-                    }];
-                  })
-                }
-              }
-            ]
+                  ]
+                }];
+              })
+            }
           }
-        }
+        ]
       }
     },
     {
@@ -285,137 +270,133 @@
     {
       block: 'team',
       title: "We're a team that adore what we do",
-      content: [{
-          block: 'row',
-          content: {
-            block: 'team',
-            elem: 'list',
-            content: {
-              block: 'slider',
-              content: [
-                {
-                  elem: 'item',
-                  content: {
-                    block: 'mylist',
+      content: {
+        block: 'team',
+        elem: 'list',
+        content: {
+          block: 'slider',
+          content: [
+            {
+              elem: 'item',
+              content: {
+                block: 'mylist',
+                content: [
+                  {
+                    js: { animation: 'fadeInUp' },
+                    img: '../../img/team-01.png',
+                    title: 'Jon Snow',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                  },
+                  {
+                    js: { animation: 'fadeInUp', delay: '0.5s' },
+                    img: '../../img/team-02.png',
+                    title: 'Cersei Lannister',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                  },
+                  {
+                    js: { animation: 'fadeInUp', delay: '1s' },
+                    img: '../../img/team-03.png',
+                    title: 'Jamie Lannister',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                  }
+                ].map(function(item) {
+                  return [{
+                    elem: 'item',
+                    js: item.js,
                     content: [
                       {
-                        js: { animation: 'fadeInUp' },
-                        img: '../../img/team-01.png',
-                        title: 'Jon Snow',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                        elem: 'image',
+                        attrs: { src: item.img, alt: 'Team Member' }
                       },
                       {
-                        js: { animation: 'fadeInUp', delay: '0.5s' },
-                        img: '../../img/team-02.png',
-                        title: 'Cersei Lannister',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                        block: 'heading',
+                        mods: { 'type': 'list' },
+                        content: item.title
                       },
                       {
-                        js: { animation: 'fadeInUp', delay: '1s' },
-                        img: '../../img/team-03.png',
-                        title: 'Jamie Lannister',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                        elem: 'item-text',
+                        content: item.text
+                      },
+                      {
+                        elem: 'social',
+                        content: {
+                          block: 'social'
+                        }
                       }
-                    ].map(function(item) {
-                      return [{
-                        elem: 'item',
-                        js: item.js,
-                        content: [
-                          {
-                            elem: 'image',
-                            attrs: { src: item.img, alt: 'Team Member' }
-                          },
-                          {
-                            block: 'heading',
-                            mods: { 'type': 'list' },
-                            content: item.title
-                          },
-                          {
-                            elem: 'item-text',
-                            content: item.text
-                          },
-                          {
-                            elem: 'social',
-                            content: {
-                              block: 'social'
-                            }
-                          }
-                        ]
-                      }];
-                    })
+                    ]
+                  }];
+                })
+              }
+            },
+            {
+              elem: 'item',
+              content: {
+                block: 'mylist',
+                content: [
+                  {
+                    js: { animation: 'fadeInUp' },
+                    img: '../../img/team-01.png',
+                    title: 'Jon Snow',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                  },
+                  {
+                    js: { animation: 'fadeInUp', delay: '0.5s' },
+                    img: '../../img/team-02.png',
+                    title: 'Cersei Lannister',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                  },
+                  {
+                    js: { animation: 'fadeInUp', delay: '1s' },
+                    img: '../../img/team-03.png',
+                    title: 'Jamie Lannister',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
                   }
-                },
-                {
-                  elem: 'item',
-                  content: {
-                    block: 'mylist',
+                ].map(function(item) {
+                  return [{
+                    elem: 'item',
+                    js: item.js,
                     content: [
                       {
-                        js: { animation: 'fadeInUp' },
-                        img: '../../img/team-01.png',
-                        title: 'Jon Snow',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                        elem: 'image',
+                        attrs: { src: item.img, alt: 'Team Member' }
                       },
                       {
-                        js: { animation: 'fadeInUp', delay: '0.5s' },
-                        img: '../../img/team-02.png',
-                        title: 'Cersei Lannister',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
+                        block: 'heading',
+                        mods: { 'type': 'list' },
+                        content: item.title
                       },
                       {
-                        js: { animation: 'fadeInUp', delay: '1s' },
-                        img: '../../img/team-03.png',
-                        title: 'Jamie Lannister',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.'
-                      }
-                    ].map(function(item) {
-                      return [{
-                        elem: 'item',
-                        js: item.js,
-                        content: [
-                          {
-                            elem: 'image',
-                            attrs: { src: item.img, alt: 'Team Member' }
-                          },
-                          {
-                            block: 'heading',
-                            mods: { 'type': 'list' },
-                            content: item.title
-                          },
-                          {
-                            elem: 'item-text',
-                            content: item.text
-                          },
-                          {
-                            elem: 'social',
-                            content: {
-                              block: 'social',
-                              content: [
-                                {
-                                  elem: 'item',
-                                  type: 'dribble'
-                                },
-                                {
-                                  elem: 'item',
-                                  type: 'twitter'
-                                },
-                                {
-                                  elem: 'item',
-                                  type: 'email'
-                                }
-                              ]
+                        elem: 'item-text',
+                        content: item.text
+                      },
+                      {
+                        elem: 'social',
+                        content: {
+                          block: 'social',
+                          content: [
+                            {
+                              elem: 'item',
+                              type: 'dribble'
+                            },
+                            {
+                              elem: 'item',
+                              type: 'twitter'
+                            },
+                            {
+                              elem: 'item',
+                              type: 'email'
                             }
-                          }
-                        ]
-                      }];
-                    })
-                  }
-                }
-              ]
+                          ]
+                        }
+                      }
+                    ]
+                  }];
+                })
+              }
             }
-          }
+          ]
         }
-      ]
+      }
     },
     {
       block: 'subscribe'

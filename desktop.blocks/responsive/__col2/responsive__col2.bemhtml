@@ -1,0 +1,16 @@
+block('responsive').elem('col2')(
+  def()(function() {
+    applyCtx({
+      block: 'container',
+      mods: { 'fixed': true },
+      content: {
+        block: 'row',
+        content: {
+          block: 'responsive',
+          elem: 'col2',
+          content: this.ctx.content
+        }
+      }
+      });
+    })
+  )

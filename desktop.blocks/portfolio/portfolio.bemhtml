@@ -1,4 +1,16 @@
 block('portfolio')(
   tag()('section'),
-  js()(true)
+  js()(true),
+  content()(function() {
+    var content = [];
+    content.push({
+      block: 'container',
+      mods: { 'fixed': true },
+      content: {
+        block: 'row',
+        content: this.ctx.content
+      }
+      });
+    return content;
+    })
   )

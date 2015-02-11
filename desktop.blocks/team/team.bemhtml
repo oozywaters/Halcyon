@@ -12,7 +12,11 @@ block('team')(
             elem: 'heading',
             content: this.ctx.title
           }
-        }, this.ctx.content
+        },
+        {
+          block: 'row',
+          content: this.ctx.content
+        }
       ]
     }];
     })
