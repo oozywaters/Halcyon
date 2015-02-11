@@ -28,7 +28,6 @@ BEMDOM.decl(this.name, {
     };
   },
   _onReady: function() {
-    console.log('Slider Inited')
     this.emit('ready');
   }
 });

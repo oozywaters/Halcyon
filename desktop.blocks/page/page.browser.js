@@ -6,8 +6,6 @@ BEMDOM.decl(this.name, {
   onSetMod: {
     'js': {
       'inited': function() {
-
-        console.log('Initialization Here');
         // var chan = BEM.channel('some');
         // console.log(BEMDOM);
 
